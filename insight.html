@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirHealth | Understand the data</title>
+    <link rel="icon" href="./src/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/style/styles.css" />
+    <link rel="stylesheet" href="./src/style/insight.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer type="module" src="./src/js/controller.js"></script>
+  </head>
+  <body>
+    <header class="hero container">
+      <div class="hero__logo">
+        <a href="index.html" target="_blank">
+          <img
+            class="hero__logo__icon"
+            src="./src/img/icon.svg"
+            alt="airhealth"
+        /></a>
+        <a href="index.html" target="_blank">
+          <img
+            class="hero__logo__full"
+            src="./src/img/full_logo.svg"
+            alt="airhealth"
+          />
+        </a>
+      </div>
+
+      <div class="hero__search">
+        <input
+          type="text"
+          class="hero__search--input"
+          placeholder="Explore Air Quality by Location"
+        />
+        <button class="hero__search--btn">
+          <img class="hero__search--btn-icon" src="./src/img/search.svg" />
+        </button>
+      </div>
+
+      <div class="hero__insight">
+        <a href="insight.html" class="hero__insight--link">Insight</a>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="core container">
+        <div class="about">
+          <p class="about__content-paragraph">
+            AirHealth is dedicated to providing current and accessible air
+            pollution data, empowering informed decisions for well-being. As air
+            pollution significantly impacts health and the environment,
+            AirHealth's mission is to raise awareness and enable a better
+            understanding of air quality data for informed health choices.
+          </p>
+          <p class="about__content-paragraph">
+            Utilizing the
+            <a
+              href="https://openweathermap.org/api/air-pollution"
+              class="about__content-paragraph--link"
+              target="_blank"
+              >OpenWeather Air Pollution API</a
+            >
+            and
+            <a
+              href="https://opencagedata.com/"
+              class="about__content-paragraph--link"
+              target="_blank"
+              >OpenCage Geocoding API</a
+            >, AirHealth offers comprehensive access to current air pollution
+            data worldwide. This dataset encompasses pollutants such as
+            <a
+              href="https://en.wikipedia.org/wiki/Carbon_monoxide"
+              target="_blank"
+              >Carbon Monoxide (CO)</a
+            >,
+            <a href="https://en.wikipedia.org/wiki/Nitric_oxide" target="_blank"
+              >Nitrogen Monoxide (NO)</a
+            >,
+            <a
+              href="https://en.wikipedia.org/wiki/Nitrogen_dioxide"
+              target="_blank"
+              >Nitrogen Dioxide (NO2)</a
+            >,
+            <a href="https://en.wikipedia.org/wiki/Ozone" target="_blank"
+              >Ozone (O3)</a
+            >,
+            <a
+              href="https://en.wikipedia.org/wiki/Sulfur_dioxide"
+              target="_blank"
+              >Sulphur Dioxide (SO2)</a
+            >,
+            <a href="https://en.wikipedia.org/wiki/Ammonia" target="_blank"
+              >Ammonia (NH3)</a
+            >, as well as particulates
+            <a href="https://en.wikipedia.org/wiki/Particulates" target="_blank"
+              >PM2.5</a
+            >
+            and
+            <a
+              href="https://en.wikipedia.org/wiki/Particulates#Size,_shape_and_solubility_matter"
+              target="_blank"
+              >PM10</a
+            >.
+          </p>
+          <p class="about__content-paragraph">
+            The user-friendly interface enables easy access to vital
+            information, allowing users to monitor local and global air quality
+            indices and pollutant concentrations.
+          </p>
+          <p class="about__content-paragraph">
+            Users are encouraged to explore air quality indices and pollutant
+            concentrations in multiple locations worldwide through AirHealth.
+            This exploration will provide a comprehensive understanding of air
+            quality conditions in various regions, assisting in making informed
+            decisions for health and well-being.
+          </p>
+          <p class="about__content-paragraph">Here's how to use AirHealth:</p>
+          <p class="about__content-paragraph">
+            Upon your initial visit to our website from a desktop device, your
+            browser may ask to use your location. Please select 'Allow' to
+            enable personalized air quality information based on your current
+            whereabouts. After allowing access to your current location, please
+            allow a few moments for the data to be fetched.
+          </p>
+          <p class="about__content-paragraph">
+            This ensures personalized and accurate data, enhancing your
+            understanding of the local air quality conditions.
+          </p>
+          <p class="about__content-paragraph">
+            When accessing from a mobile device, please enter a specific
+            location to retrieve comprehensive air quality details. For best
+            results, provide precise locations with exact addresses.
+          </p>
+          <p class="about__content-paragraph">
+            Bad Address Example:
+            <br />
+            Vienna, Austria
+            <br />
+          </p>
+          <p class="about__content-paragraph">
+            Good Address Example:
+            <br />
+            Stephansplatz 1, 1010 Vienna, Austria
+          </p>
+        </div>
+      </section>
+      <section class="graphs">
+        <div class="graph">
+          <table class="graph__table">
+            <thead>
+              <tr>
+                <th class="table-header" colspan="1">Type</th>
+                <th class="table-header" colspan="1">Index</th>
+                <th class="table-header" colspan="1">SO2 [μg/m3]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row--good">
+                <td>Good</td>
+                <td>1</td>
+                <td>0 - 20</td>
+              </tr>
+              <tr class="table__row--fair">
+                <td>Fair</td>
+                <td>2</td>
+                <td>20 - 80</td>
+              </tr>
+              <tr class="table__row--moderate">
+                <td>Moderate</td>
+                <td>3</td>
+                <td>80 - 250</td>
+              </tr>
+              <tr class="table__row--poor">
+                <td>Poor</td>
+                <td>4</td>
+                <td>250 - 350</td>
+              </tr>
+              <tr class="table__row--very-poor">
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>> 350</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="graph">
+          <table class="graph__table">
+            <thead>
+              <tr>
+                <th class="table-header" colspan="1">Type</th>
+                <th class="table-header" colspan="1">Index</th>
+                <th class="table-header" colspan="1">NO2 [μg/m3]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row--good">
+                <td>Good</td>
+                <td>1</td>
+                <td>0 - 40</td>
+              </tr>
+              <tr class="table__row--fair">
+                <td>Fair</td>
+                <td>2</td>
+                <td>40 - 70</td>
+              </tr>
+              <tr class="table__row--moderate">
+                <td>Moderate</td>
+                <td>3</td>
+                <td>70 - 150</td>
+              </tr>
+              <tr class="table__row--poor">
+                <td>Poor</td>
+                <td>4</td>
+                <td>150 - 200</td>
+              </tr>
+              <tr class="table__row--very-poor">
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>> 200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="graph">
+          <table class="graph__table">
+            <thead>
+              <tr>
+                <th class="table-header" colspan="1">Type</th>
+                <th class="table-header" colspan="1">Index</th>
+                <th class="table-header" colspan="1">PM10 [μg/m3]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row--good">
+                <td>Good</td>
+                <td>1</td>
+                <td>0 - 20</td>
+              </tr>
+              <tr class="table__row--fair">
+                <td>Fair</td>
+                <td>2</td>
+                <td>20 - 50</td>
+              </tr>
+              <tr class="table__row--moderate">
+                <td>Moderate</td>
+                <td>3</td>
+                <td>50 - 100</td>
+              </tr>
+              <tr class="table__row--poor">
+                <td>Poor</td>
+                <td>4</td>
+                <td>100 - 200</td>
+              </tr>
+              <tr class="table__row--very-poor">
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>> 200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="graph">
+          <table class="graph__table">
+            <thead>
+              <tr>
+                <th class="table-header" colspan="1">Type</th>
+                <th class="table-header" colspan="1">Index</th>
+                <th class="table-header" colspan="1">PM2.5 [μg/m3]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row--good">
+                <td>Good</td>
+                <td>1</td>
+                <td>0 - 10</td>
+              </tr>
+              <tr class="table__row--fair">
+                <td>Fair</td>
+                <td>2</td>
+                <td>10 - 25</td>
+              </tr>
+              <tr class="table__row--moderate">
+                <td>Moderate</td>
+                <td>3</td>
+                <td>25 - 50</td>
+              </tr>
+              <tr class="table__row--poor">
+                <td>Poor</td>
+                <td>4</td>
+                <td>50 - 75</td>
+              </tr>
+              <tr class="table__row--very-poor">
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>> 75</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="graph">
+          <table class="graph__table">
+            <thead>
+              <tr>
+                <th class="table-header" colspan="1">Type</th>
+                <th class="table-header" colspan="1">Index</th>
+                <th class="table-header" colspan="1">O3 [μg/m3]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row--good">
+                <td>Good</td>
+                <td>1</td>
+                <td>0 - 60</td>
+              </tr>
+              <tr class="table__row--fair">
+                <td>Fair</td>
+                <td>2</td>
+                <td>60 - 100</td>
+              </tr>
+              <tr class="table__row--moderate">
+                <td>Moderate</td>
+                <td>3</td>
+                <td>100 - 140</td>
+              </tr>
+              <tr class="table__row--poor">
+                <td>Poor</td>
+                <td>4</td>
+                <td>140 - 180</td>
+              </tr>
+              <tr class="table__row--very-poor">
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>> 180</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="graph">
+          <table class="graph__table">
+            <thead>
+              <tr>
+                <th class="table-header" colspan="1">Type</th>
+                <th class="table-header" colspan="1">Index</th>
+                <th class="table-header" colspan="1">CO [μg/m3]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row--good">
+                <td>Good</td>
+                <td>1</td>
+                <td>0 - 4400</td>
+              </tr>
+              <tr class="table__row--fair">
+                <td>Fair</td>
+                <td>2</td>
+                <td>4400 - 9400</td>
+              </tr>
+              <tr class="table__row--moderate">
+                <td>Moderate</td>
+                <td>3</td>
+                <td>9400 - 12400</td>
+              </tr>
+              <tr class="table__row--poor">
+                <td>Poor</td>
+                <td>4</td>
+                <td>12400 - 15400</td>
+              </tr>
+              <tr class="table__row--very-poor">
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>> 15400</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__info container">
+        <p>
+          Developed as a personal portfolio project, <br />this application
+          represents a quality forecast platform, <br />providing advanced air
+          quality forecasts and valuable insights into atmospheric conditions.
+          <br />
+          &copy; Copyright by
+          <a
+            href="https://github.com/novaigo"
+            class="footer__info--link"
+            target="_blank"
+            >Igor Novakovic</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

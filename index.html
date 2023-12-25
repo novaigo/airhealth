@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirHealth | Going out? Check air quality!</title>
+    <link rel="icon" href="./src/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/style/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer type="module" src="./src/js/controller.js"></script>
+  </head>
+  <body>
+    <header class="hero container">
+      <div class="hero__logo">
+        <a href="index.html">
+          <img
+            class="hero__logo__icon"
+            src="./src/img/icon.svg"
+            alt="airhealth"
+        /></a>
+        <a href="index.html">
+          <img
+            class="hero__logo__full"
+            src="./src/img/full_logo.svg"
+            alt="airhealth"
+          />
+        </a>
+      </div>
+
+      <div class="hero__search">
+        <form class="hero__search--form">
+          <input
+            type="text"
+            class="hero__search--input"
+            placeholder="Explore Air Quality by Location"
+          />
+          <button class="hero__search--btn" type="submit">
+            <img class="hero__search--btn-icon" src="./src/img/search.svg" />
+          </button>
+        </form>
+      </div>
+
+      <div class="hero__insight">
+        <a href="insight.html" class="hero__insight--link" target="_blank"
+          >Insight</a
+        >
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="core container">
+        <div class="welcome">
+          <div class="welcome--box">
+            <h1 class="welcome__title">
+              Going out? <br />
+              Check air quality!
+            </h1>
+            <h4 class="welcome__subtitle">
+              Breathe Easy with Real-Time Air Quality Data.
+            </h4>
+            <p class="welcome__paragraph">
+              <span class="welcome__paragraph--bold">
+                Here's how to use AirHealth:</span
+              >
+            </p>
+            <p class="welcome__paragraph">
+              Upon your initial visit to our website from a desktop device, your
+              browser may ask to use your location. Please select
+              <span class="welcome__paragraph--bold"> 'Allow' </span> to enable
+              personalized air quality information based on your current
+              whereabouts. After allowing access to your current location,
+              please allow a few moments for the data to be fetched.
+            </p>
+            <p class="welcome__paragraph">
+              This ensures personalized and accurate data, enhancing your
+              understanding of the local air quality conditions.
+            </p>
+            <p class="welcome__paragraph">
+              When accessing from a mobile device, please enter a specific
+              location to retrieve comprehensive air quality details. For best
+              results, provide precise locations with exact addresses.
+            </p>
+            <p class="welcome__paragraph">
+              <span class="welcome__paragraph--bold">Bad Address Example: </span
+              ><br />
+              Vienna, Austria
+              <br />
+            </p>
+            <p class="welcome__paragraph">
+              <span class="welcome__paragraph--bold"
+                >Good Address Example: </span
+              ><br />
+              Stephansplatz 1, 1010 Vienna, Austria
+            </p>
+          </div>
+        </div>
+        <div class="insert__aqi">
+          <!-- <section class="aqi">
+            <div class="aqi__value">
+              <div class="aqi__value--progress">
+                <span class="progress-value"></span>
+              </div>
+            </div>
+          </section> -->
+        </div>
+
+        <div class="insert__message">
+          <!-- <section class="message">
+              <div class="message--box">
+                <p>
+                  Good news! <br />
+                  The air is clean and perfect for outdoor activities.
+                </p> 
+              </div>
+            </section> -->
+        </div>
+      </section>
+      <div class="insert__place">
+        <!-- <section class="place">
+                <p></p>
+                <div class="horizontal-line"></div>
+              </section> -->
+      </div>
+      <div class="insert__time">
+        <!-- <section class="time">
+                <div><p>Time&Date</p></div>
+                <div class="horizontal-line"></div>
+              </section> -->
+      </div>
+
+      <div class="insert__weather">
+        <!-- <section class="weather">
+            <div class="weather--box">
+              <div class="weather__wind">
+                  <span class="weather__wind-value"> m/s </span> WIND 
+                </div>
+              <div class="weather__temp">
+                  <span class="weather__temp-value"> &#176;C</span> TEMPERATURE 
+              </div>
+              <div class="weather__humidity">
+                <span class="weather__humidity-value"> &#37;</span> HUMIDITY
+              </div>
+            </div>
+          </section> -->
+      </div>
+      <div class="insert__pollutants">
+        <!-- <section class="pollutants container">
+            <div class="pollutants--box">
+              <div class="pollutants__name-link">
+                <div class="pollutants__name-link--name">NO<sub>2</sub></div>
+                <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+                </div>
+              </div>
+
+              <div class="pollutants__description">
+                Nitrogen dioxide is a harmful gas resulting from combustion engines, industrial activities, and heating systems.
+              </div>
+              <div class="pollutants__concentration">
+                  <span class="pollutants__concentration--amount">${state.no2}</span>
+                <div>
+                  <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+                </div>
+              </div>
+              <div class="pollutants__arrow"></div>
+            </div>
+        </section>
+
+        <section class="pollutants container">
+          <div class="pollutants--box">
+            <div class="pollutants__name-link">
+              <div class="pollutants__name-link--name">SO<sub>2</sub></div>
+              <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+              </div>
+            </div>
+
+            <div class="pollutants__description">
+              Sulfur dioxide is emitted from burning fossil fuels, notably high-sulfur content vehicles and industry machinery.
+            </div>
+            <div class="pollutants__concentration">
+              <span class="pollutants__concentration--amount">${state.so2}</span>
+              <div>
+                <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+              </div>
+            </div>
+            <div class="pollutants__arrow">
+          </div>
+          </div>
+        </section>
+
+        <section class="pollutants container">
+          <div class="pollutants--box">
+            <div class="pollutants__name-link">
+              <div class="pollutants__name-link--name">O<sub>3</sub></div>
+              <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+              </div>
+            </div>
+
+            <div class="pollutants__description">
+              Ozone at ground level is an air pollutant formed by the reaction of sunlight with pollutants from vehicles and industry.
+            </div>
+            <div class="pollutants__concentration">
+              <span class="pollutants__concentration--amount">${state.o3}</span>
+              <div>
+                <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+              </div>
+            </div>
+            <div class="pollutants__arrow"></div>
+        </section>
+
+        <section class="pollutants container">
+          <div class="pollutants--box">
+            <div class="pollutants__name-link">
+              <div class="pollutants__name-link--name">PM<sub>2.5</sub></div>
+              <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+              </div>
+            </div>
+
+            <div class="pollutants__description">
+              Particulate Matter 2.5 refers to fine inhalable particles originating from vehicle emissions and industrial processes.
+            </div>
+            <div class="pollutants__concentration">
+              <span class="pollutants__concentration--amount">${state.pm2_5}</span>
+              <div>
+                <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+              </div>
+            </div>
+            <div class="pollutants__arrow"></div>
+          </div>
+        </section>
+
+        <section class="pollutants container">
+          <div class="pollutants--box">
+            <div class="pollutants__name-link">
+              <div class="pollutants__name-link--name">PM<sub>10</sub></div>
+              <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+              </div>
+            </div>
+
+            <div class="pollutants__description">
+              Particulate Matter 10 consists of larger inhalable particles originating from sources like road dust and construction.
+            </div>
+            <div class="pollutants__concentration">
+              <span class="pollutants__concentration--amount">${state.pm10}</span>
+              <div>
+                <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+              </div>
+            </div>
+            <div class="pollutants__arrow"></div>
+          </div>
+        </section>
+
+        <section class="pollutants container">
+          <div class="pollutants--box">
+            <div class="pollutants__name-link">
+              <div class="pollutants__name-link--name">PM<sub>10</sub></div>
+              <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+              </div>
+            </div>
+
+            <div class="pollutants__description">
+              Particulate Matter 10 consists of larger inhalable particles originating from sources like road dust and construction.
+            </div>
+            <div class="pollutants__concentration">
+              <span class="pollutants__concentration--amount">${state.pm10}</span>
+              <div>
+                <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+              </div>
+            </div>
+            <div class="pollutants__arrow"></div>
+          </div>
+        </section>
+          
+        <section class="pollutants container">
+          <div class="pollutants--box">
+            <div class="pollutants__name-link">
+              <div class="pollutants__name-link--name">CO</div>
+              <div class="pollutants__name-link--link">
+                <a href="insight.html" target="_blank" ><img src="src/img/arrow-link.svg" alt="insight" /></a>
+              </div>
+            </div>
+
+            <div class="pollutants__description">
+              Carbon monoxide is a toxic gas emitted primarily from vehicle exhaust and industrial processes.
+            </div>
+            <div class="pollutants__concentration">
+              <span class="pollutants__concentration--amount">${state.co}</span>
+              <div>
+                  <span class="pollutants__concentration--unit">µg/m<sup>3</sup></span>
+              </div>
+            </div>
+            <div class="pollutants__arrow"></div>
+          </div>
+        </section> -->
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__info container">
+        <p>
+          Developed as a personal portfolio project, <br />this application
+          represents a quality forecast platform, <br />providing advanced air
+          quality forecasts and valuable insights into atmospheric conditions.
+          <br />
+          &copy; Copyright by
+          <a
+            href="https://github.com/novaigo"
+            class="footer__info--link"
+            target="_blank"
+            >Igor Novakovic</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

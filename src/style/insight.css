@@ -1,0 +1,96 @@
+body {
+  color: var(--color-base--dark);
+  line-height: 1.4;
+}
+
+.about {
+  font-size: 1.315rem;
+  max-width: 1150px;
+  font-weight: 300;
+  text-align: justify;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.about__content-paragraph {
+  padding: 0.75em 0;
+}
+
+.about__content-paragraph a {
+  text-decoration: none;
+  color: var(--color-base--dark);
+}
+
+.about__content-paragraph--link {
+  text-decoration: none;
+  color: var(--color-base--dark);
+  font-weight: 400;
+}
+
+/* TABLE */
+
+table {
+  background-color: var(--color-base--light);
+  min-width: 260px;
+  padding: 1em;
+  font-weight: 300;
+  border-radius: 1.5em;
+  margin: 0 auto;
+}
+
+table th,
+table td {
+  align-items: center;
+  justify-content: center;
+}
+
+.graph {
+  padding: 0.5em 0;
+}
+
+.graph__table {
+  background-color: var(--color-base--light);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (min-width: 540px) {
+  table {
+    min-width: 420px;
+  }
+
+  .graph__table {
+    font-size: 1.315rem;
+  }
+
+  .graph {
+    padding: 0.75em 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .graphs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+}
+
+.table__row--pollutants {
+  background-color: var(--color-base--1);
+}
+.table__row--good {
+  background-color: #6beb5b;
+}
+.table__row--fair {
+  background-color: #d4e13c;
+}
+.table__row--moderate {
+  background-color: #f7c928;
+}
+.table__row--poor {
+  background-color: #ff7033;
+}
+.table__row--very-poor {
+  background-color: #ff3333;
+}
