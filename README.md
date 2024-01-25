@@ -1,7 +1,7 @@
 # AirHealth - Going out? Check air quality!
 
 <p align="center">
-<img src='./src/img/iconGithub.png' width='125px' style='margin-top:10px;'/></p>
+<img src='./src/img/iconGithub.png' width='125px'/></p>
 
 <h1 align="center"><a href='https://airhealth.netlify.app/' target='_blank' rel='noopener noreferrer'>
 airhealth.netlify.app</a></h1>
@@ -23,14 +23,13 @@ airhealth.netlify.app</a></h1>
 
 Desktop Experience:
 
-- Upon your initial visit, your browser may ask to use your location. Please select 'Allow' for personalized air quality information.
+Upon your initial visit, your browser may ask to use your location. Please select 'Allow' for personalized air quality information.
 
 Allow a few moments for the data to be fetched, ensuring accurate and personalized information.
 
 Mobile Experience:
 
-- Enter a specific location for comprehensive air quality details.
-  Provide precise locations with exact addresses for the best results.
+Enter a specific location for comprehensive air quality details. Provide precise locations with exact addresses for the best results.
 
 Examples:
 
