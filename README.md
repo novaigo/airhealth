@@ -1,7 +1,7 @@
 # AirHealth - Going out? Check air quality!
 
 <p align="center">
-<img src='./src/img/iconGithub.png' width='125px'/></p>
+<img src='./src/img/iconGithub.png' width='125px' style='margin-top:10px;'/></p>
 
 <h1 align="center"><a href='https://airhealth.netlify.app/' target='_blank' rel='noopener noreferrer'>
 airhealth.netlify.app</a></h1>
